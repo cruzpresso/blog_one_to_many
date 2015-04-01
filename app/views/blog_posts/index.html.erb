@@ -1,0 +1,10 @@
+<h1>This is the LoL Index</h1>
+
+<hr>
+
+<% @blog_posts.each do |blog_post| %>
+  <p><%= blog_post.title %>
+    <%= link_to "Show", blog_post_path(blog_post.id) %>
+  </p>
+  <hr>
+<% end %>
