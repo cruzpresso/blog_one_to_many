@@ -1,2 +1,13 @@
 <h1><%= @blog_post.title %></h1>
 <p><%= @blog_post.body %></p>
+<hr>
+<h2>Comments</h2>
+  <% @comments.each do |comment| %>
+    <p><%= comment.body %></p>
+    <hr>
+  <% end %>
+
+  <%= form_for [@blog_post, @comment] do |f| %>
+    <p><%= f.text_field :body %></p>
+    <%= f.submit %>
+  <% end %>

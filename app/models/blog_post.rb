@@ -1,5 +1,3 @@
-class BlogPost < ActiveRecord::Base
-
-  
-  
+class BlogPost < ActiveRecord::Base  
+  has_many :comments
 end
